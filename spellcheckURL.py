@@ -52,7 +52,7 @@ def parse_to_words(text):
 	return word_arr
 
 def check_text(text, elem):
-	s = get_dict_s('./English.csv')
+	s = get_dict_s('./Dictionary.csv')
 	words = parse_to_words(text)
 	#words = try_with_error(parse_to_words, message = 'error parsing text "'+text+'"', text = text)
 	# if not words:
