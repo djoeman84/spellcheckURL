@@ -3,6 +3,10 @@ spellcheckURL
 
 Simple Python helper to check spelling of webpages
 
+Dependencies:
+
+* BeautifulSoup for parsing: [sudo easy_install beautifulsoup4] or http://www.crummy.com/software/BeautifulSoup/
+
 Usage:
   
 ```unix
