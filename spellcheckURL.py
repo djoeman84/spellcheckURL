@@ -39,7 +39,8 @@ def check_args(args):
 def parse_switch(type):
 	return {
 		'tag':parse_tags,
-		'all':parse_all
+		'all':parse_all,
+		'class':parse_class
 	}.get(type, parse_na)
 
 def parse_to_words(text):
@@ -75,6 +76,10 @@ def check_elems(elems):
 def parse_tags(soup, args):
 	for tag in args:
 		check_elems(soup.findAll(tag))
+
+def parse_class(soup, args):
+	for class_name in args:
+		check_elems(soup.findAll(attrs={'class':class_name}))
 
 def parse_all(soup, args):
 	check_elems(soup.body.findChildren())
